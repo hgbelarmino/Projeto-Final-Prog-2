@@ -1,4 +1,4 @@
-# Resident Evil - Trabalho Pratico de Programacao de Computadores II (2026/2)
+# Trabalho Programacao de Computadores II (2026/2)
 
 ## Dependencias
 - gcc, make
@@ -6,8 +6,7 @@
 
 ## Compilacao e execucao
 ```
-make
-./resident      # execute na pasta onde estao mapa1.txt, mapa2.txt...
+
 ```
 
 ## Controles
