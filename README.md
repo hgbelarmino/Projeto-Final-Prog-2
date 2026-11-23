@@ -1,4 +1,4 @@
-# Resident Evil - Trabalho Pratico de Programacao de Computadores II (2026/2)
+# Trabalho Programacao de Computadores II (2026/2)
 
 ## Dependencias
 - gcc, make
