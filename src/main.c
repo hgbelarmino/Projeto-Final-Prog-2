@@ -1,43 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+/* main.c - ponto de entrada e loop principal
+ *
+ * Aqui vai:
+ *  - declarar o Jogo local e inicializar (fase 1, 3 vidas, 0 pontos)
+ *  - carregar mapa1.txt; se falhar, mensagem de erro e encerrar
+ *  - InitWindow / SetTargetFPS
+ *  - loop (enquanto a janela nao fecha):
+ *      1. dt = GetFrameTime()
+ *      2. tratar TAB / menu (pausa)
+ *      3. se nao pausado: atualizar portoes, entregador, zumbis, regras
+ *      4. se terminou a fase: tentar mapa(N+1).txt; se nao existir, vitoria
+ *      5. desenhar
+ *  - CloseWindow e liberar toda a memoria no fim
+ */
 
-#include "raylib.h"
 #include "tipos.h"
-#include "mapa.h"
-#include "render.h"
-
-int main(void) {
-    Jogo jogo;
-    memset(&jogo, 0, sizeof(jogo));
-    jogo.fase = 1;
-    jogo.vidas = VIDAS_INICIAIS;
-    jogo.pontos = 0;
-    jogo.pontosEntrada = 0;
-
-    int r = carregarMapa(&jogo, jogo.fase);
-    if (r == 0) {
-        fprintf(stderr, "Erro: mapa1.txt nao encontrado no diretorio de execucao.\n");
-        return 1;
-    }
-    if (r < 0) {
-        fprintf(stderr, "Erro: falha ao ler mapa1.txt (formato invalido ou sem memoria).\n");
-        return 1;
-    }
-
-    InitWindow(LARGURA_TELA, ALTURA_TELA, "Resident Evil - Prog II");
-    SetTargetFPS(60);
-
-    while (!WindowShouldClose()) {
-        /* TODO (Pessoa B): atualizar entregador, tempo, colisoes
-         * TODO (Pessoa C): atualizar zumbis, portoes, menu */
-        BeginDrawing();
-        ClearBackground(BLACK);
-        desenharJogo(&jogo);
-        EndDrawing();
-    }
-
-    CloseWindow();
-    liberarFase(&jogo);
-    return 0;
-}

@@ -3,13 +3,15 @@
 
 #include "tipos.h"
 
-/* Le mapaN.txt e preenche jogo (grade, kits, zumbis, jogador, tempo).
- * Mantem vidas/pontos/fase ja existentes em jogo.
- * Retorna 1 em sucesso; 0 se o arquivo nao existe; -1 em erro de leitura/memoria.
- * Em falha, jogo fica sem memoria alocada (seguro chamar liberarFase). */
-int carregarMapa(Jogo *jogo, int numero);
-
-/* Libera grade, kits e zumbis. Pode ser chamada varias vezes. */
-void liberarFase(Jogo *jogo);
+/* Funcoes planejadas:
+ *
+ * carregarMapa(jogo, numero)
+ *   - abre mapaN.txt, le o tempo e as 20 linhas
+ *   - aloca a grade, os kits e os zumbis
+ *   - retorna: sucesso / arquivo inexistente / erro de leitura ou memoria
+ *
+ * liberarFase(jogo)
+ *   - libera grade, kits e zumbis (pode ser chamada mais de uma vez)
+ */
 
 #endif

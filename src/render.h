@@ -3,7 +3,11 @@
 
 #include "tipos.h"
 
-/* Desenha grade, kits, zumbis, jogador e HUD. Chamar entre BeginDrawing/EndDrawing. */
-void desenharJogo(const Jogo *jogo);
+/* Funcoes planejadas:
+ *
+ * desenharJogo(jogo)
+ *   - desenha terreno, entidades e HUD
+ *   - deve ser chamada entre BeginDrawing e EndDrawing
+ */
 
 #endif
