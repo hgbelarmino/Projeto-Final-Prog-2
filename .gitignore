@@ -1,0 +1,5 @@
+*.o
+resident
+resident.exe
+save.bin
+.vscode/
