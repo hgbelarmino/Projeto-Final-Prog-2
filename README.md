@@ -6,8 +6,7 @@
 
 ## Compilacao e execucao
 ```
-make
-./resident      # execute na pasta onde estao mapa1.txt, mapa2.txt...
+
 ```
 
 ## Controles
