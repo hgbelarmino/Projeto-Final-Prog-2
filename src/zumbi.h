@@ -16,4 +16,8 @@
  *   - volta aos pontos iniciais, direcao aleatoria, espera 0,5 s
  */
 
+/* Prototipos usados pelo main.c / menu.c (Pessoa A).
+ * Se precisarem mudar a assinatura, avisem para ajustar as chamadas. */
+void reposicionarZumbis(Jogo *jogo);
+
 #endif

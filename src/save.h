@@ -15,4 +15,10 @@
  *   - em falha: manter o estado atual em memoria
  */
 
+/* Prototipos usados pelo main.c / menu.c (Pessoa A).
+ * Se precisarem mudar a assinatura, avisem para ajustar as chamadas. */
+/* retornam 1 em caso de sucesso e 0 em caso de falha */
+int salvarJogo(const Jogo *jogo, const char *nomeArquivo);
+int carregarJogo(Jogo *jogo, const char *nomeArquivo);
+
 #endif

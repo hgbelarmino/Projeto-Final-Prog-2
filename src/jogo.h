@@ -26,4 +26,8 @@
  *   - ordem de prioridade: tempo, contato com zumbi, kit/abrigo, evacuacao
  */
 
+/* Prototipos usados pelo main.c / menu.c (Pessoa A).
+ * Se precisarem mudar a assinatura, avisem para ajustar as chamadas. */
+Resultado atualizarJogo(Jogo *jogo, float dt);
+
 #endif
